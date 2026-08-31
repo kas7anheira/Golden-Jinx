@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+:root{
+  --gold:#C8A24A;
+  --black:#111111;
+  --ivory:#FAFAF8;
+  --graphite:#555555;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--ivory);
+  color:var(--black);
+  font-family:var(--font-body);
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:var(--font-title);
+}
+
+.container{
+  max-width:1400px;
+  margin:auto;
+  padding-left:32px;
+  padding-right:32px;
+}
+
+.gold{
+  color:var(--gold);
+}
+
+.btn-primary{
+  background:var(--gold);
+  color:black;
+  padding:16px 34px;
+  border-radius:999px;
+  font-weight:600;
+  transition:.35s;
+  text-decoration:none;
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px);
+}
+
+.btn-secondary{
+  border:1px solid var(--gold);
+  color:var(--gold);
+  padding:16px 34px;
+  border-radius:999px;
+  text-decoration:none;
+  transition:.35s;
+}
+
+.btn-secondary:hover{
+  background:var(--gold);
+  color:black;
+}
+.gold {
+
+    color:#C8A24A;
+
+    text-shadow:
+        0 0 10px rgba(200,162,74,.25),
+        0 0 20px rgba(200,162,74,.15);
+
+}
+/* =========================================
+   GOLDEN JINX - PREMIUM ANIMATIONS
+   ========================================= */
+
+@keyframes goldenFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes goldenFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes goldenScale {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* Entrada suave */
+
+.golden-fade-up {
+  animation: goldenFadeUp 0.9s ease-out both;
+}
+
+.golden-fade-in {
+  animation: goldenFadeIn 1s ease-out both;
+}
+
+.golden-scale {
+  animation: goldenScale 1s ease-out both;
+}
+
+
+/* Delays */
+
+.golden-delay-1 {
+  animation-delay: 0.15s;
+}
+
+.golden-delay-2 {
+  animation-delay: 0.3s;
+}
+
+.golden-delay-3 {
+  animation-delay: 0.45s;
+}
+
+.golden-delay-4 {
+  animation-delay: 0.6s;
+}
+
+
+/* =========================================
+   HOVER DOS CARTÕES
+   ========================================= */
+
+.golden-card {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.golden-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  border-color: rgba(200, 162, 74, 0.35);
+}
+
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+
+.btn-primary {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(200, 162, 74, 0.25);
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+.golden-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.golden-link:hover {
+  color: #C8A24A;
+}
+
+
+/* =========================================
+   IMAGENS
+   ========================================= */
+
+.golden-image {
+  transition:
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.golden-card:hover .golden-image {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   ACESSIBILIDADE
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
