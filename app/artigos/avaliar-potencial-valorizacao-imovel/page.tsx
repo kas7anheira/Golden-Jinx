@@ -4,25 +4,42 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/footer/Footer";
 
+const siteUrl = (
+  process.env.URL ||
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "https://golden-jinx.netlify.app"
+).replace(/\/$/, "");
+
+const profileUrl = `${siteUrl}/luis-filipe-madeira-castanheira`;
+const articleUrl = `${siteUrl}/artigos/avaliar-potencial-valorizacao-imovel`;
+
 export const metadata: Metadata = {
   title:
     "Como avaliar o potencial de valorização de um imóvel | Luís Filipe Madeira Castanheira",
   description:
     "Luís Filipe Madeira Castanheira explica critérios práticos para avaliar o potencial de valorização de um imóvel antes da compra.",
+  alternates: { canonical: "/artigos/avaliar-potencial-valorizacao-imovel" },
+  authors: [{ name: "Luís Filipe Madeira Castanheira", url: profileUrl }],
   robots: { index: true, follow: true },
 };
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
+  "@id": `${articleUrl}#article`,
+  url: articleUrl,
   headline: "Como avaliar o potencial de valorização de um imóvel antes de comprar",
   author: {
     "@type": "Person",
+    "@id": `${profileUrl}#person`,
     name: "Luís Filipe Madeira Castanheira",
+    url: profileUrl,
   },
   publisher: {
     "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
     name: "Golden Jinx",
+    url: siteUrl,
   },
   about: [
     "Investimento imobiliário",
@@ -46,7 +63,9 @@ export default function ArticlePage() {
       >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c"),
+          }}
         />
 
         <article style={{ maxWidth: 860, margin: "0 auto" }}>
