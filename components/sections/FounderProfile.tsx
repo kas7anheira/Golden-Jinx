@@ -1,73 +1,35 @@
+import Image from "next/image";
 import Link from "next/link";
+
+import profilePhoto from "@/public/luis-castanheira-profissional.png";
+
+import styles from "./founder-profile.module.css";
 
 export default function FounderProfile() {
   return (
-    <section
-      style={{
-        background: "#0a0a0a",
-        color: "white",
-        padding: "clamp(64px, 9vw, 110px) 24px",
-        borderTop: "1px solid rgba(255,255,255,.07)",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: 1120,
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))",
-          gap: "clamp(34px, 6vw, 72px)",
-          alignItems: "end",
-        }}
-      >
-        <div>
-          <p
-            style={{
-              color: "#C8A24A",
-              textTransform: "uppercase",
-              letterSpacing: 4,
-              fontSize: 10,
-              margin: "0 0 18px",
-            }}
-          >
-            Perfil profissional
-          </p>
-          <h2
-            style={{
-              fontFamily: "var(--font-title)",
-              fontSize: "clamp(2.2rem, 5vw, 4.2rem)",
-              fontWeight: 500,
-              lineHeight: 1,
-              margin: 0,
-            }}
-          >
-            Luís Filipe Madeira Castanheira
-          </h2>
+    <section className={styles.section} aria-labelledby="founder-profile-title">
+      <div className={styles.inner}>
+        <div className={styles.portraitWrap}>
+          <Image
+            className={styles.portrait}
+            src={profilePhoto}
+            alt="Retrato profissional de Luís Filipe Madeira Castanheira"
+            sizes="(max-width: 760px) 92vw, 34vw"
+          />
         </div>
 
-        <div>
-          <p
-            style={{
-              color: "#aaa",
-              lineHeight: 1.85,
-              margin: 0,
-              maxWidth: 560,
-            }}
-          >
-            Economista e empresário ligado à Golden Jinx, com atividade em
-            investimento, remodelação e valorização imobiliária.
+        <div className={styles.copy}>
+          <p className={styles.eyebrow}>Fundador · Perfil profissional</p>
+          <h2 id="founder-profile-title">Luís Filipe Madeira Castanheira</h2>
+          <p className={styles.role}>Economista e empresário</p>
+          <p className={styles.description}>
+            Fundador da Golden Jinx, com uma abordagem que reúne análise económica,
+            investimento imobiliário e capacidade de execução em construção,
+            remodelação e valorização de imóveis.
           </p>
-          <Link
-            href="/luis-filipe-madeira-castanheira"
-            style={{
-              display: "inline-block",
-              marginTop: 22,
-              color: "#C8A24A",
-              textDecoration: "none",
-              fontWeight: 600,
-            }}
-          >
-            Conhecer o perfil →
+          <blockquote>“Rigor antes do brilho.”</blockquote>
+          <Link href="/luis-filipe-madeira-castanheira" className={styles.link}>
+            Conhecer o perfil profissional <span aria-hidden="true">→</span>
           </Link>
         </div>
       </div>

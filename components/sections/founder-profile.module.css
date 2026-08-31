@@ -1,0 +1,141 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(78px, 10vw, 138px) clamp(20px, 5vw, 72px);
+  border-top: 1px solid rgba(200, 162, 74, 0.22);
+  background:
+    radial-gradient(circle at 78% 40%, rgba(200, 162, 74, 0.11), transparent 34%),
+    #0a0a0a;
+  color: #f7f5ef;
+}
+
+.section::before {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(200, 162, 74, 0.32), transparent);
+  content: "";
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(290px, 0.74fr) minmax(0, 1.26fr);
+  gap: clamp(46px, 9vw, 138px);
+  align-items: center;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.portraitWrap {
+  position: relative;
+  max-width: 470px;
+  padding: 11px;
+  border: 1px solid rgba(200, 162, 74, 0.33);
+}
+
+.portraitWrap::before {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 76px;
+  height: 76px;
+  border-top: 2px solid #c8a24a;
+  border-left: 2px solid #c8a24a;
+  content: "";
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: saturate(0.86) contrast(1.02);
+}
+
+.copy {
+  max-width: 670px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #c8a24a;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.31em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.copy h2 {
+  margin: 18px 0 0;
+  font-size: clamp(3rem, 6.5vw, 6.1rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+  text-wrap: balance;
+}
+
+.role {
+  margin: 25px 0 0;
+  color: #d2c6a7;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.description {
+  max-width: 620px;
+  margin: 24px 0 0;
+  color: #a9a9a5;
+  font-size: clamp(0.98rem, 1.5vw, 1.08rem);
+  line-height: 1.88;
+}
+
+.copy blockquote {
+  margin: 30px 0 0;
+  padding: 20px 0 20px 24px;
+  border-left: 1px solid #c8a24a;
+  color: #eee9dc;
+  font-family: var(--font-title);
+  font-size: clamp(1.7rem, 3vw, 2.45rem);
+  font-style: italic;
+  line-height: 1;
+}
+
+.link {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 30px;
+  color: #c8a24a;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.link span {
+  transition: transform 200ms ease;
+}
+
+.link:hover span {
+  transform: translateX(5px);
+}
+
+@media (max-width: 760px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .portraitWrap {
+    max-width: 560px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link span {
+    transition: none;
+  }
+}
