@@ -24,6 +24,13 @@ export const metadata: Metadata = {
   title: "Golden Jinx | Sparkling Solutions",
   description:
     "Transformamos potencial em brilho. Compra, venda, arrendamento e remodelação de imóveis.",
+  icons: {
+    icon: [
+      { url: "/icon.svg?v=3", type: "image/svg+xml" },
+      { url: "/favicon.ico?v=3", sizes: "any" },
+    ],
+    shortcut: "/icon.svg?v=3",
+  },
   verification: {
     google: "OTQ2lgwaAK0JkD76jFONYumBIKzq5u6fWVqV7LbOnBI",
   },
