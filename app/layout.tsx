@@ -25,11 +25,8 @@ export const metadata: Metadata = {
   description:
     "Transformamos potencial em brilho. Compra, venda, arrendamento e remodelação de imóveis.",
   icons: {
-    icon: [
-      { url: "/icon.svg?v=3", type: "image/svg+xml" },
-      { url: "/favicon.ico?v=3", sizes: "any" },
-    ],
-    shortcut: "/icon.svg?v=3",
+    icon: "/favicon.ico?v=4",
+    shortcut: "/favicon.ico?v=4",
   },
   verification: {
     google: "OTQ2lgwaAK0JkD76jFONYumBIKzq5u6fWVqV7LbOnBI",
