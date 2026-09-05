@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8B5A12"/>
+      <stop offset="0.18" stop-color="#F7E28A"/>
+      <stop offset="0.42" stop-color="#D4AF37"/>
+      <stop offset="0.68" stop-color="#FFF0A6"/>
+      <stop offset="1" stop-color="#A66F16"/>
+    </linearGradient>
+    <clipPath id="loopClip">
+      <path d="M21 50 C34 26, 76 20, 93 33 C105 42, 95 56, 73 58 C55 60, 37 57, 27 51" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+    </clipPath>
+  </defs>
+  <circle cx="64" cy="64" r="61" fill="#050505" stroke="url(#gold)" stroke-width="3"/>
+  <path d="M21 50 C34 26, 76 20, 93 33 C105 42, 95 56, 73 58 C55 60, 37 57, 27 51" fill="none" stroke="url(#gold)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M94 33 C87 46, 80 58, 77 70 C73 87, 74 101, 83 108" fill="none" stroke="url(#gold)" stroke-width="11" stroke-linecap="round"/>
+  <g clip-path="url(#loopClip)" stroke="#17120A" stroke-width="1.5" opacity="0.9">
+    <path d="M18 35 L42 63"/><path d="M22 31 L46 59"/><path d="M26 28 L50 56"/><path d="M30 25 L54 53"/><path d="M34 23 L58 51"/><path d="M38 21 L62 49"/><path d="M42 20 L66 48"/>
+  </g>
+  <path d="M20 50 C34 26, 76 20, 93 33" fill="none" stroke="#FFF3B0" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+</svg>
