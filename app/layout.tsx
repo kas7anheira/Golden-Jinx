@@ -52,11 +52,12 @@ const organizationSchema = {
     "@type": "Country",
     name: "Portugal",
   },
-  founder: {
+  employee: {
     "@type": "Person",
     "@id": "https://luiscastanheira.com/#person",
     name: "Luís Castanheira",
     url: "https://luiscastanheira.com",
+    jobTitle: "Sócio-Gerente",
   },
 };
 
