@@ -60,25 +60,24 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="identityCard" aria-label="Perfil profissional">
-            <div className="monogram">LC</div>
-            <div className="identityLine">
-              <span>Formação</span>
-              <strong>Economia</strong>
-            </div>
-            <div className="identityLine">
-              <span>Empresa</span>
-              <strong>Golden Jinx</strong>
-            </div>
-            <div className="identityLine">
-              <span>Função</span>
-              <strong>Sócio-Gerente</strong>
-            </div>
-            <div className="identityLine">
-              <span>Atuação</span>
-              <strong>Portugal</strong>
-            </div>
-          </div>
+          <figure className="portraitCard" aria-label="Retrato profissional de Luís Castanheira">
+            <div className="portraitAccent" aria-hidden="true" />
+            <img
+              className="portraitImage"
+              src="https://raw.githubusercontent.com/kas7anheira/Golden-Jinx/main/public/luis-castanheira-profissional.png"
+              alt="Luís Castanheira"
+            />
+            <figcaption>
+              <div>
+                <span>Luís Castanheira</span>
+                <strong>Economista · Empresário</strong>
+              </div>
+              <div>
+                <span>Golden Jinx</span>
+                <strong>Sócio-Gerente</strong>
+              </div>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
