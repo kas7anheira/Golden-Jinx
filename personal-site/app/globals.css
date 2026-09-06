@@ -109,8 +109,8 @@ main {
   max-width: 1380px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(300px, .55fr);
-  gap: clamp(50px, 9vw, 140px);
+  grid-template-columns: minmax(0, 1.1fr) minmax(340px, .65fr);
+  gap: clamp(50px, 8vw, 120px);
   align-items: center;
 }
 
@@ -199,60 +199,77 @@ main {
   color: #c8a24a;
 }
 
-.identityCard {
+.portraitCard {
   position: relative;
-  padding: 34px;
-  border: 1px solid rgba(200,162,74,.35);
-  background: linear-gradient(145deg, rgba(200,162,74,.08), rgba(255,255,255,.015));
+  max-width: 520px;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid rgba(200,162,74,.38);
+  background: linear-gradient(145deg, rgba(200,162,74,.06), rgba(255,255,255,.018));
 }
 
-.identityCard::after {
+.portraitCard::after {
   content: "";
   position: absolute;
-  right: -16px;
-  bottom: -16px;
-  width: 34%;
-  height: 34%;
-  border-right: 1px solid rgba(200,162,74,.48);
-  border-bottom: 1px solid rgba(200,162,74,.48);
+  right: -17px;
+  bottom: -17px;
+  width: 36%;
+  height: 36%;
+  z-index: -1;
+  border-right: 1px solid rgba(200,162,74,.5);
+  border-bottom: 1px solid rgba(200,162,74,.5);
 }
 
-.monogram {
+.portraitAccent {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 88px;
+  height: 88px;
+  border-top: 2px solid #c8a24a;
+  border-left: 2px solid #c8a24a;
+  pointer-events: none;
+}
+
+.portraitImage {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(.88) contrast(1.03);
+}
+
+.portraitCard figcaption {
   display: grid;
-  place-items: center;
-  width: 150px;
-  aspect-ratio: 1;
-  margin: 0 auto 34px;
-  border: 1px solid rgba(200,162,74,.5);
-  border-radius: 50%;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 17px 5px 5px;
+}
+
+.portraitCard figcaption div:last-child {
+  text-align: right;
+}
+
+.portraitCard figcaption span,
+.portraitCard figcaption strong {
+  display: block;
+}
+
+.portraitCard figcaption span {
   color: #c8a24a;
-  font-family: Georgia, serif;
-  font-size: 3.8rem;
-  font-style: italic;
-}
-
-.identityLine {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 22px;
-  padding: 16px 0;
-  border-top: 1px solid rgba(255,255,255,.08);
-}
-
-.identityLine span {
-  color: #72716d;
-  font-size: .63rem;
+  font-size: .58rem;
   font-weight: 700;
-  letter-spacing: .16em;
+  letter-spacing: .18em;
   text-transform: uppercase;
 }
 
-.identityLine strong {
-  color: #e5dfd1;
-  font-size: .88rem;
+.portraitCard figcaption strong {
+  margin-top: 6px;
+  color: #9c9991;
+  font-size: .69rem;
   font-weight: 600;
-  text-align: right;
+  line-height: 1.45;
 }
 
 .section {
@@ -474,8 +491,8 @@ footer a {
     grid-template-columns: 1fr;
   }
 
-  .identityCard {
-    max-width: 560px;
+  .portraitCard {
+    width: min(100%, 560px);
   }
 
   .profile {
@@ -514,6 +531,14 @@ footer a {
 
   .hero h1 {
     font-size: clamp(3.7rem, 20vw, 6rem);
+  }
+
+  .portraitCard figcaption {
+    grid-template-columns: 1fr;
+  }
+
+  .portraitCard figcaption div:last-child {
+    text-align: left;
   }
 
   .sectionIntro {
