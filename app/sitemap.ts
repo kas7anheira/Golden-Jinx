@@ -4,7 +4,7 @@ function getSiteUrl() {
   return (
     process.env.URL ||
     process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://golden-jinx.netlify.app"
+    "https://goldenjinx.com"
   ).replace(/\/$/, "");
 }
 
@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/projetos`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/contactos`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/avaliar-imovel`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/luis-filipe-madeira-castanheira`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/luis-castanheira`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/artigos`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/artigos/avaliar-potencial-valorizacao-imovel`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
