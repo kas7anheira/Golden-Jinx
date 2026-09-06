@@ -4,7 +4,7 @@ function getSiteUrl() {
   return (
     process.env.URL ||
     process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://golden-jinx.netlify.app"
+    "https://goldenjinx.com"
   ).replace(/\/$/, "");
 }
 
