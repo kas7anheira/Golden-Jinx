@@ -5,7 +5,7 @@ import "./globals.css";
 const siteUrl = (
   process.env.URL ||
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://golden-jinx.netlify.app"
+  "https://goldenjinx.com"
 ).replace(/\/$/, "");
 
 const manrope = Manrope({
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Golden Jinx | Sparkling Solutions",
   description:
-    "Transformamos potencial em brilho. Compra, venda, arrendamento e remodelação de imóveis.",
+    "Transformamos potencial em brilho. Compra, venda, arrendamento, construção e remodelação de imóveis.",
   icons: {
     icon: [
       {
@@ -46,7 +46,7 @@ const organizationSchema = {
   url: siteUrl,
   slogan: "Sparkling Solutions",
   description:
-    "Empresa portuguesa dedicada à construção, remodelação, investimento e valorização imobiliária.",
+    "Empresa portuguesa dedicada à construção, remodelação e valorização imobiliária.",
   email: "info@goldenjinx.pt",
   areaServed: {
     "@type": "Country",
@@ -54,8 +54,9 @@ const organizationSchema = {
   },
   founder: {
     "@type": "Person",
-    "@id": `${siteUrl}/luis-filipe-madeira-castanheira#person`,
-    name: "Luís Filipe Madeira Castanheira",
+    "@id": "https://luiscastanheira.com/#person",
+    name: "Luís Castanheira",
+    url: "https://luiscastanheira.com",
   },
 };
 
