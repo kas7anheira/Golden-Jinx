@@ -7,19 +7,19 @@ import Footer from "@/components/footer/Footer";
 const siteUrl = (
   process.env.URL ||
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://golden-jinx.netlify.app"
+  "https://goldenjinx.com"
 ).replace(/\/$/, "");
 
-const profileUrl = `${siteUrl}/luis-filipe-madeira-castanheira`;
+const profileUrl = `${siteUrl}/luis-castanheira`;
 const articleUrl = `${siteUrl}/artigos/avaliar-potencial-valorizacao-imovel`;
 
 export const metadata: Metadata = {
   title:
-    "Como avaliar o potencial de valorização de um imóvel | Luís Filipe Madeira Castanheira",
+    "Como avaliar o potencial de valorização de um imóvel | Luís Castanheira",
   description:
-    "Luís Filipe Madeira Castanheira explica critérios práticos para avaliar o potencial de valorização de um imóvel antes da compra.",
+    "Luís Castanheira explica critérios práticos para avaliar o potencial de valorização de um imóvel antes da compra.",
   alternates: { canonical: "/artigos/avaliar-potencial-valorizacao-imovel" },
-  authors: [{ name: "Luís Filipe Madeira Castanheira", url: profileUrl }],
+  authors: [{ name: "Luís Castanheira", url: profileUrl }],
   robots: { index: true, follow: true },
 };
 
@@ -31,9 +31,9 @@ const articleSchema = {
   headline: "Como avaliar o potencial de valorização de um imóvel antes de comprar",
   author: {
     "@type": "Person",
-    "@id": `${profileUrl}#person`,
-    name: "Luís Filipe Madeira Castanheira",
-    url: profileUrl,
+    "@id": "https://luiscastanheira.com/#person",
+    name: "Luís Castanheira",
+    url: "https://luiscastanheira.com",
   },
   publisher: {
     "@type": "Organization",
@@ -42,10 +42,10 @@ const articleSchema = {
     url: siteUrl,
   },
   about: [
-    "Investimento imobiliário",
+    "Imobiliário",
     "Valorização de imóveis",
     "Remodelação",
-    "Análise de investimento",
+    "Análise de projetos",
   ],
 };
 
@@ -85,7 +85,7 @@ export default function ArticlePage() {
               marginTop: 34,
             }}
           >
-            Investimento imobiliário
+            Análise imobiliária
           </p>
 
           <h1
@@ -103,10 +103,10 @@ export default function ArticlePage() {
           <p style={{ color: "#888", lineHeight: 1.7 }}>
             Por {" "}
             <Link
-              href="/luis-filipe-madeira-castanheira"
+              href="/luis-castanheira"
               style={{ color: "#C8A24A", textDecoration: "none" }}
             >
-              Luís Filipe Madeira Castanheira
+              Luís Castanheira
             </Link>
           </p>
 
@@ -149,7 +149,7 @@ export default function ArticlePage() {
               Nenhuma obra relevante deve ser analisada apenas pelo orçamento mais
               baixo. Uma avaliação responsável inclui margem para trabalhos não
               previstos. Sem essa reserva, pequenas surpresas tornam-se erosão direta
-              da margem do investimento.
+              da margem do projeto.
             </p>
 
             <h2 style={headingStyle}>4. Procurar valor, não apenas área</h2>
@@ -162,7 +162,7 @@ export default function ArticlePage() {
 
             <h2 style={headingStyle}>5. Definir a estratégia antes da compra</h2>
             <p>
-              Um imóvel destinado a venda, arrendamento ou exploração própria pode
+              Um imóvel destinado a venda, arrendamento ou utilização própria pode
               justificar decisões diferentes. A intervenção deve nascer da estratégia
               e do público-alvo. Só depois faz sentido escolher materiais, nível de
               acabamento e profundidade da remodelação.
@@ -170,8 +170,8 @@ export default function ArticlePage() {
 
             <h2 style={headingStyle}>6. Medir a margem antes de se apaixonar pelo projeto</h2>
             <p>
-              Uma oportunidade pode ser visualmente apelativa e ainda assim ser um mau
-              investimento. O exercício económico deve sobreviver a cenários menos
+              Uma oportunidade pode ser visualmente apelativa e ainda assim ser uma má
+              decisão. O exercício económico deve sobreviver a cenários menos
               favoráveis, como uma venda mais lenta, aumento de custos ou necessidade de
               trabalhos adicionais. Se a margem desaparecer ao primeiro desvio, o risco
               está provavelmente demasiado concentrado.
