@@ -5,9 +5,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
-  title: "Artigos de Luís Filipe Madeira Castanheira | Golden Jinx",
+  title: "Artigos de Luís Castanheira | Golden Jinx",
   description:
-    "Artigos de Luís Filipe Madeira Castanheira sobre investimento imobiliário, remodelação, custos e valorização de imóveis.",
+    "Artigos de Luís Castanheira sobre imobiliário, remodelação, custos, construção e valorização de imóveis.",
   robots: { index: true, follow: true },
 };
 
@@ -53,7 +53,7 @@ export default function ArtigosPage() {
               margin: 0,
             }}
           >
-            Artigos de Luís Filipe Madeira Castanheira
+            Artigos de Luís Castanheira
           </h1>
           <p
             style={{
@@ -63,7 +63,7 @@ export default function ArtigosPage() {
               marginTop: 30,
             }}
           >
-            Conteúdos sobre economia aplicada ao imobiliário, investimento,
+            Conteúdos sobre economia aplicada ao imobiliário, construção,
             remodelação, valorização e gestão de projetos.
           </p>
 
@@ -107,10 +107,10 @@ export default function ArtigosPage() {
           <p style={{ marginTop: 54, color: "#777", lineHeight: 1.8 }}>
             Autor: {" "}
             <Link
-              href="/luis-filipe-madeira-castanheira"
+              href="/luis-castanheira"
               style={{ color: "#C8A24A", textDecoration: "none" }}
             >
-              Luís Filipe Madeira Castanheira
+              Luís Castanheira
             </Link>
           </p>
         </div>
