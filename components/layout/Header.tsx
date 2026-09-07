@@ -12,6 +12,7 @@ const defaults = {
   header_buy_label: "Comprar",
   header_rent_label: "Arrendar",
   header_projects_label: "Projetos",
+  header_luis_label: "Luís Castanheira",
   header_contacts_label: "Contactos",
 
   header_cta_label: "Avaliar Imóvel",
@@ -40,6 +41,11 @@ export default function Header() {
         label:
           settings.header_projects_label,
         href: "/projetos",
+      },
+      {
+        label:
+          settings.header_luis_label,
+        href: "/luis-castanheira",
       },
       {
         label:
