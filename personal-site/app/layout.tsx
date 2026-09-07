@@ -20,6 +20,12 @@ export const metadata: Metadata = {
     "valorização imobiliária"
   ],
   alternates: { canonical: "/" },
+  authors: [{ name: "Luís Castanheira", url: siteUrl }],
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    shortcut: "/icon.svg"
+  },
   openGraph: {
     title: "Luís Castanheira | Economista e Empresário",
     description:
@@ -27,9 +33,34 @@ export const metadata: Metadata = {
     url: siteUrl,
     type: "profile",
     locale: "pt_PT",
-    siteName: "Luís Castanheira"
+    siteName: "Luís Castanheira",
+    images: [
+      {
+        url: "/luis-castanheira-profissional.png",
+        width: 1254,
+        height: 1254,
+        alt: "Retrato profissional de Luís Castanheira"
+      }
+    ]
   },
-  robots: { index: true, follow: true }
+  twitter: {
+    card: "summary_large_image",
+    title: "Luís Castanheira | Economista e Empresário",
+    description:
+      "Economista, empresário e sócio-gerente da Golden Jinx, com atividade em construção, remodelação e valorização imobiliária.",
+    images: ["/luis-castanheira-profissional.png"]
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1
+    }
+  }
 };
 
 const personSchema = {
@@ -42,6 +73,7 @@ const personSchema = {
   jobTitle: "Economista, empresário e sócio-gerente da Golden Jinx",
   description:
     "Economista e empresário com atividade em construção, remodelação e valorização imobiliária.",
+  image: `${siteUrl}/luis-castanheira-profissional.png`,
   worksFor: {
     "@type": "Organization",
     "@id": "https://goldenjinx.com/#organization",
@@ -64,7 +96,7 @@ const personSchema = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt">
+    <html lang="pt-PT">
       <body>
         <script
           type="application/ld+json"
