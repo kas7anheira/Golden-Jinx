@@ -220,6 +220,10 @@ export default function Footer() {
               Avaliar imóvel
             </FooterLink>
 
+            <FooterLink href="/luis-castanheira">
+              Luís Castanheira
+            </FooterLink>
+
             <FooterLink href="/contactos">
               Contactos
             </FooterLink>
