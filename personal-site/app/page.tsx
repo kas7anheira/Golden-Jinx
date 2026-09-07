@@ -125,6 +125,7 @@ export default function Home() {
           </p>
           <a className="textLink" href="https://goldenjinx.com">Visitar goldenjinx.com <span>↗</span></a>
           <a className="textLink" href="https://goldenjinx.com/luis-castanheira">Perfil na Golden Jinx <span>↗</span></a>
+          <a className="textLink" href="https://goldenjinx.com/artigos">Artigos e perspetiva <span>↗</span></a>
         </div>
       </section>
 
