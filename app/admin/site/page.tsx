@@ -105,7 +105,7 @@ const fields: FieldDefinition[] = [
     type: "textarea",
     rows: 4,
     defaultValue:
-      "Identificamos oportunidades exclusivas.\nTransformamos imóveis em património com valor.\nCriamos espaços para viver e investir.",
+      "Identificamos oportunidades exclusivas.\nTransformamos imóveis em património com valor.\nCriamos espaços para viver com qualidade.",
   },
   {
     key: "hero_background_image",
