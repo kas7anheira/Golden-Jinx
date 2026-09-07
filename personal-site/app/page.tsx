@@ -41,6 +41,7 @@ export default function Home() {
           <a href="#atividade">Atividade</a>
           <a href="#golden-jinx">Golden Jinx</a>
           <a href="/artigos">Artigos</a>
+          <a href="https://www.linkedin.com/in/luiscastanheira/">LinkedIn</a>
           <a href="#contacto">Contacto</a>
         </nav>
       </header>
@@ -59,6 +60,7 @@ export default function Home() {
               <a className="primary" href="https://goldenjinx.com">Conhecer a Golden Jinx</a>
               <a className="secondary" href="#perfil">Conhecer o perfil</a>
               <a className="secondary" href="/artigos">Ler artigos</a>
+              <a className="secondary" href="https://www.linkedin.com/in/luiscastanheira/">LinkedIn</a>
             </div>
           </div>
 
