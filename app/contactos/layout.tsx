@@ -1,4 +1,22 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
+
+export const metadata: Metadata = {
+  title: "Contactos | Golden Jinx",
+  description:
+    "Contacte a Golden Jinx para construção, remodelação, valorização imobiliária, imóveis disponíveis ou apresentação de oportunidades.",
+  alternates: { canonical: "/contactos" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Contactos | Golden Jinx",
+    description:
+      "Entre em contacto com a Golden Jinx.",
+    url: "/contactos",
+    siteName: "Golden Jinx",
+    locale: "pt_PT",
+    type: "website",
+  },
+};
 
 export default function ContactosLayout({
   children,
