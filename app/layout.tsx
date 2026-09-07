@@ -27,11 +27,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/golden-jinx-icon-v7.svg",
-        type: "image/svg+xml",
+        url: "/golden-jinx-favicon-glow.png",
+        type: "image/png",
+        sizes: "64x64",
       },
     ],
-    shortcut: "/golden-jinx-icon-v7.svg",
+    shortcut: "/golden-jinx-favicon-glow.png",
   },
   verification: {
     google: "OTQ2lgwaAK0JkD76jFONYumBIKzq5u6fWVqV7LbOnBI",
