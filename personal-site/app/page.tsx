@@ -64,7 +64,7 @@ export default function Home() {
             <div className="portraitAccent" aria-hidden="true" />
             <img
               className="portraitImage"
-              src="https://raw.githubusercontent.com/kas7anheira/Golden-Jinx/main/public/luis-castanheira-profissional.png"
+              src="/luis-castanheira-profissional.png"
               alt="Luís Castanheira"
             />
             <figcaption>
@@ -124,6 +124,7 @@ export default function Home() {
             A Golden Jinx desenvolve projetos de construção, remodelação e valorização imobiliária, além da compra, venda e arrendamento de imóveis próprios. Luís Castanheira exerce funções de sócio-gerente da empresa.
           </p>
           <a className="textLink" href="https://goldenjinx.com">Visitar goldenjinx.com <span>↗</span></a>
+          <a className="textLink" href="https://goldenjinx.com/luis-castanheira">Perfil na Golden Jinx <span>↗</span></a>
         </div>
       </section>
 
@@ -154,7 +155,7 @@ export default function Home() {
 
       <footer>
         <span>© 2026 Luís Castanheira</span>
-        <a href="https://goldenjinx.com">Golden Jinx · Sparkling Solutions</a>
+        <a href="https://goldenjinx.com/luis-castanheira">Perfil na Golden Jinx</a>
       </footer>
     </main>
   );
