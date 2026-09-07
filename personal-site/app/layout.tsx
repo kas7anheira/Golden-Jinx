@@ -90,7 +90,8 @@ const profilePageSchema = {
       slogan: "Sparkling Solutions"
     },
     sameAs: [
-      "https://goldenjinx.com/luis-castanheira"
+      "https://goldenjinx.com/luis-castanheira",
+      "https://www.linkedin.com/in/luiscastanheira/"
     ],
     knowsAbout: [
       "Economia",
