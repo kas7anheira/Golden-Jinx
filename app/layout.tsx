@@ -80,6 +80,9 @@ const organizationSchema = {
     "@id": "https://luiscastanheira.com/#person",
     name: "Luís Castanheira",
     url: "https://luiscastanheira.com",
+    sameAs: [
+      "https://www.linkedin.com/in/luiscastanheira/",
+    ],
     jobTitle: "Sócio-Gerente",
   },
 };
