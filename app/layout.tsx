@@ -24,6 +24,28 @@ export const metadata: Metadata = {
   title: "Golden Jinx | Sparkling Solutions",
   description:
     "Transformamos potencial em brilho. Compra, venda, arrendamento, construção e remodelação de imóveis.",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Golden Jinx | Sparkling Solutions",
+    description:
+      "Transformamos potencial em brilho através da construção, remodelação e valorização imobiliária.",
+    url: siteUrl,
+    siteName: "Golden Jinx",
+    locale: "pt_PT",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Golden Jinx | Sparkling Solutions",
+    description:
+      "Construção, remodelação e valorização imobiliária com foco na criação de valor.",
+  },
   icons: {
     icon: [
       {
@@ -68,7 +90,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt">
+    <html lang="pt-PT">
       <body className={`${manrope.variable} ${cormorant.variable}`}>
         <script
           type="application/ld+json"
