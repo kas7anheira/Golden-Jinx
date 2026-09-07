@@ -13,14 +13,14 @@ export default function FounderProfile() {
           <Image
             className={styles.portrait}
             src={profilePhoto}
-            alt="Retrato profissional de Luís Filipe Madeira Castanheira"
+            alt="Retrato profissional de Luís Castanheira"
             sizes="(max-width: 760px) 92vw, 34vw"
           />
         </div>
 
         <div className={styles.copy}>
           <p className={styles.eyebrow}>Fundador · Perfil profissional</p>
-          <h2 id="founder-profile-title">Luís Filipe Madeira Castanheira</h2>
+          <h2 id="founder-profile-title">Luís Castanheira</h2>
           <p className={styles.role}>Economista e empresário</p>
           <p className={styles.description}>
             Fundador da Golden Jinx, com uma abordagem que reúne análise económica,
@@ -28,7 +28,7 @@ export default function FounderProfile() {
             remodelação e valorização de imóveis.
           </p>
           <blockquote>“Rigor antes do brilho.”</blockquote>
-          <Link href="/luis-filipe-madeira-castanheira" className={styles.link}>
+          <Link href="/luis-castanheira" className={styles.link}>
             Conhecer o perfil profissional <span aria-hidden="true">→</span>
           </Link>
         </div>
