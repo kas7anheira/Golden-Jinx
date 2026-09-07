@@ -99,6 +99,10 @@ export default function Hero() {
             lineHeight: 0.95,
             fontWeight: 400,
 
+            color: "#ffffff",
+
+            textShadow: "0 3px 24px rgba(0,0,0,.55)",
+
             margin:
               "0 0 clamp(24px, 5vw, 30px)",
 
