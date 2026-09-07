@@ -59,6 +59,12 @@ const fields: FieldDefinition[] = [
     defaultValue: "Projetos",
   },
   {
+    key: "header_luis_label",
+    label: "Menu · Luís Castanheira",
+    group: "header",
+    defaultValue: "Luís Castanheira",
+  },
+  {
     key: "header_contacts_label",
     label: "Menu · Contactos",
     group: "header",
