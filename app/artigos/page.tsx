@@ -8,7 +8,17 @@ export const metadata: Metadata = {
   title: "Artigos de Luís Castanheira | Golden Jinx",
   description:
     "Artigos de Luís Castanheira sobre imobiliário, remodelação, custos, construção e valorização de imóveis.",
+  alternates: { canonical: "/artigos" },
   robots: { index: true, follow: true },
+  openGraph: {
+    title: "Artigos de Luís Castanheira | Golden Jinx",
+    description:
+      "Economia aplicada ao imobiliário, construção, remodelação, custos e valorização.",
+    url: "/artigos",
+    siteName: "Golden Jinx",
+    locale: "pt_PT",
+    type: "website",
+  },
 };
 
 const articles = [
