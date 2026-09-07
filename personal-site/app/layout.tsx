@@ -63,35 +63,44 @@ export const metadata: Metadata = {
   }
 };
 
-const personSchema = {
+const profilePageSchema = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": `${siteUrl}/#person`,
-  name: "Luís Castanheira",
-  alternateName: "Luis Castanheira",
+  "@type": "ProfilePage",
+  "@id": `${siteUrl}/#profile-page`,
   url: siteUrl,
-  jobTitle: "Economista, empresário e sócio-gerente da Golden Jinx",
+  name: "Perfil profissional de Luís Castanheira",
   description:
-    "Economista e empresário com atividade em construção, remodelação e valorização imobiliária.",
-  image: `${siteUrl}/luis-castanheira-profissional.png`,
-  worksFor: {
-    "@type": "Organization",
-    "@id": "https://goldenjinx.com/#organization",
-    name: "Golden Jinx",
-    url: "https://goldenjinx.com",
-    slogan: "Sparkling Solutions"
-  },
-  sameAs: [
-    "https://goldenjinx.com/luis-castanheira"
-  ],
-  knowsAbout: [
-    "Economia",
-    "Construção",
-    "Remodelação",
-    "Valorização imobiliária",
-    "Gestão de projetos",
-    "Controlo de custos"
-  ]
+    "Perfil profissional de Luís Castanheira, economista, empresário e sócio-gerente da Golden Jinx.",
+  dateModified: "2026-09-07T22:30:00+01:00",
+  mainEntity: {
+    "@type": "Person",
+    "@id": `${siteUrl}/#person`,
+    name: "Luís Castanheira",
+    alternateName: "Luis Castanheira",
+    url: siteUrl,
+    jobTitle: "Economista, empresário e sócio-gerente da Golden Jinx",
+    description:
+      "Economista e empresário com atividade em construção, remodelação e valorização imobiliária.",
+    image: `${siteUrl}/luis-castanheira-profissional.png`,
+    worksFor: {
+      "@type": "Organization",
+      "@id": "https://goldenjinx.com/#organization",
+      name: "Golden Jinx",
+      url: "https://goldenjinx.com",
+      slogan: "Sparkling Solutions"
+    },
+    sameAs: [
+      "https://goldenjinx.com/luis-castanheira"
+    ],
+    knowsAbout: [
+      "Economia",
+      "Construção",
+      "Remodelação",
+      "Valorização imobiliária",
+      "Gestão de projetos",
+      "Controlo de custos"
+    ]
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -101,7 +110,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(personSchema).replace(/</g, "\\u003c")
+            __html: JSON.stringify(profilePageSchema).replace(/</g, "\\u003c")
           }}
         />
         {children}
