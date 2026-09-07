@@ -7,4 +7,4 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
-Sitemap: https://luisfilipecastanheira.pt/sitemap.xml
+Sitemap: https://luiscastanheira.com/sitemap.xml
