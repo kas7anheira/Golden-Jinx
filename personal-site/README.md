@@ -1,4 +1,4 @@
-# Luís Filipe Castanheira — site profissional independente
+# Luís Castanheira — site profissional independente
 
 Microsite estático, rápido e pronto para Netlify.
 
@@ -17,7 +17,7 @@ Microsite estático, rápido e pronto para Netlify.
 ## Publicação no Netlify
 1. Criar um novo site Netlify a partir do repositório `kas7anheira/Golden-Jinx`.
 2. Definir `personal-site` como Base directory / Publish directory do site estático.
-3. Ligar o domínio `luisfilipecastanheira.pt`.
+3. Ligar o domínio `luiscastanheira.com`.
 4. No Google Search Console, adicionar a propriedade do domínio e enviar `/sitemap.xml`.
 
 ## Nota sobre LinkedIn
