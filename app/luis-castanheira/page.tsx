@@ -94,7 +94,10 @@ const profilePageSchema = {
       url: siteUrl,
       slogan: "Sparkling Solutions",
     },
-    sameAs: [personalUrl],
+    sameAs: [
+      personalUrl,
+      "https://www.linkedin.com/in/luiscastanheira/",
+    ],
     knowsAbout: [
       "Economia",
       "Construção",
@@ -173,6 +176,12 @@ export default function LuisCastanheiraPage() {
                 </Link>
                 <a className={styles.secondaryAction} href={personalUrl}>
                   Site pessoal
+                </a>
+                <a
+                  className={styles.secondaryAction}
+                  href="https://www.linkedin.com/in/luiscastanheira/"
+                >
+                  LinkedIn
                 </a>
               </div>
 
