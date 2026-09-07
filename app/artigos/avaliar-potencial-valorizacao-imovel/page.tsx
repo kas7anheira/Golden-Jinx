@@ -21,6 +21,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "/artigos/avaliar-potencial-valorizacao-imovel" },
   authors: [{ name: "Luís Castanheira", url: profileUrl }],
   robots: { index: true, follow: true },
+  openGraph: {
+    title:
+      "Como avaliar o potencial de valorização de um imóvel | Luís Castanheira",
+    description:
+      "Critérios práticos para avaliar o potencial de valorização de um imóvel antes da compra.",
+    url: articleUrl,
+    siteName: "Golden Jinx",
+    locale: "pt_PT",
+    type: "article",
+  },
 };
 
 const articleSchema = {
