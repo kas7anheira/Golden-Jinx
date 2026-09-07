@@ -12,7 +12,7 @@ const defaults = {
     "Transformamos\npotencial\nem brilho.",
 
   hero_text:
-    "Identificamos oportunidades exclusivas.\nTransformamos imóveis em património com valor.\nCriamos espaços para viver e investir.",
+    "Identificamos oportunidades exclusivas.\nTransformamos imóveis em património com valor.\nCriamos espaços para viver com qualidade.",
 
   hero_background_image:
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
