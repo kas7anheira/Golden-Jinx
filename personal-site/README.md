@@ -1,24 +1,31 @@
 # Luís Castanheira — site profissional independente
 
-Microsite estático, rápido e pronto para Netlify.
+Site Next.js do domínio oficial `luiscastanheira.com`.
 
 ## Conteúdo
-- Perfil profissional completo
-- Design responsivo premium com transição dourada entre conteúdo e retrato
+- Perfil profissional de Luís Castanheira
+- Design responsivo premium
 - SEO on-page
-- Schema.org `ProfilePage` + `Person`
+- Schema.org `Person`
 - Open Graph / Twitter Card
 - `robots.txt` e `sitemap.xml`
 - Manifest e favicon
-- `llms.txt` com resumo profissional legível por máquinas
-- Cabeçalhos de segurança para Netlify
-- Ligação à Golden Jinx e ao artigo profissional existente
+- Ligação recíproca à Golden Jinx
 
-## Publicação no Netlify
-1. Criar um novo site Netlify a partir do repositório `kas7anheira/Golden-Jinx`.
-2. Definir `personal-site` como Base directory / Publish directory do site estático.
-3. Ligar o domínio `luiscastanheira.com`.
-4. No Google Search Console, adicionar a propriedade do domínio e enviar `/sitemap.xml`.
+## Publicação
+O site é publicado através do Cloudflare Worker `luis-castanheira`.
 
-## Nota sobre LinkedIn
-Não foi inserido um URL de LinkedIn no `sameAs` porque o URL exato não está disponível neste repositório. Assim que o URL confirmado estiver disponível, deve ser acrescentado ao JSON-LD e ao rodapé.
+Configuração atual:
+- Build: `npm --prefix personal-site run build`
+- Deploy: `cd personal-site && npx wrangler deploy`
+- Domínio: `https://luiscastanheira.com`
+- `www.luiscastanheira.com` redireciona permanentemente para o domínio principal
+- HTTPS e DNSSEC ativos
+
+## Pesquisa
+A propriedade de domínio `luiscastanheira.com` está preparada para Google Search Console e o sitemap oficial é:
+
+`https://luiscastanheira.com/sitemap.xml`
+
+## Identidade pública
+Todas as referências públicas devem usar apenas o nome **Luís Castanheira**.
