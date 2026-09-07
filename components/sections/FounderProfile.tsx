@@ -19,13 +19,13 @@ export default function FounderProfile() {
         </div>
 
         <div className={styles.copy}>
-          <p className={styles.eyebrow}>Fundador · Perfil profissional</p>
+          <p className={styles.eyebrow}>Sócio-Gerente · Perfil profissional</p>
           <h2 id="founder-profile-title">Luís Castanheira</h2>
           <p className={styles.role}>Economista e empresário</p>
           <p className={styles.description}>
-            Fundador da Golden Jinx, com uma abordagem que reúne análise económica,
-            investimento imobiliário e capacidade de execução em construção,
-            remodelação e valorização de imóveis.
+            Sócio-Gerente da Golden Jinx, com uma abordagem que reúne análise económica,
+            gestão e capacidade de execução em construção, remodelação e valorização
+            de imóveis.
           </p>
           <blockquote>“Rigor antes do brilho.”</blockquote>
           <Link href="/luis-castanheira" className={styles.link}>
