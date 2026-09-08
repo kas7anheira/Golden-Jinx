@@ -183,6 +183,12 @@ export default function LuisCastanheiraPage() {
                 >
                   LinkedIn
                 </a>
+                <a
+                  className={styles.secondaryAction}
+                  href="https://luiscastanheira.com/artigos"
+                >
+                  Artigos no site pessoal
+                </a>
               </div>
 
               <dl className={styles.identityList}>
