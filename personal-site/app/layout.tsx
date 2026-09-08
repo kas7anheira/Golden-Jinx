@@ -5,7 +5,7 @@ const siteUrl = "https://luiscastanheira.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Luís Castanheira | Economista e Empresário",
+  title: "Luís Castanheira | Economista e Sócio-Gerente da Golden Jinx",
   description:
     "Site oficial de Luís Castanheira, economista, empresário e sócio-gerente da Golden Jinx, com atividade em construção, remodelação e valorização imobiliária.",
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     shortcut: "/icon.svg"
   },
   openGraph: {
-    title: "Luís Castanheira | Economista e Empresário",
+    title: "Luís Castanheira | Economista e Sócio-Gerente da Golden Jinx",
     description:
       "Economista, empresário e sócio-gerente da Golden Jinx. Rigor económico aplicado à construção, remodelação e valorização imobiliária.",
     url: siteUrl,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luís Castanheira | Economista e Empresário",
+    title: "Luís Castanheira | Economista e Sócio-Gerente da Golden Jinx",
     description:
       "Economista, empresário e sócio-gerente da Golden Jinx, com atividade em construção, remodelação e valorização imobiliária.",
     images: ["/luis-castanheira-profissional.png"]
