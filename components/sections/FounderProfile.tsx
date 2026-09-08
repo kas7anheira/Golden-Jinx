@@ -31,6 +31,9 @@ export default function FounderProfile() {
           <Link href="/luis-castanheira" className={styles.link}>
             Conhecer o perfil profissional <span aria-hidden="true">→</span>
           </Link>
+          <a href="https://luiscastanheira.com" className={styles.link}>
+            Site pessoal <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </div>
     </section>
