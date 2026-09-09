@@ -10,14 +10,15 @@ function getSiteUrl() {
 
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = getSiteUrl();
+  const blocked = ["/admin", "/admin/"];
 
   return {
     rules: [
-      {
-        userAgent: "*",
-        allow: "/",
-        disallow: ["/admin", "/admin/"],
-      },
+      { userAgent: "*", allow: "/", disallow: blocked },
+      { userAgent: "Googlebot", allow: "/", disallow: blocked },
+      { userAgent: "Bingbot", allow: "/", disallow: blocked },
+      { userAgent: "OAI-SearchBot", allow: "/", disallow: blocked },
+      { userAgent: "ChatGPT-User", allow: "/", disallow: blocked },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
   };
