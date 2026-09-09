@@ -458,6 +458,59 @@ main {
   max-width: 620px;
 }
 
+
+.recentArticles {
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.recentArticleGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 64px;
+}
+
+.recentArticleCard {
+  min-width: 0;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.09);
+  background: rgba(255,255,255,.025);
+}
+
+.recentArticleCard > span {
+  color: #c8a24a;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+.recentArticleCard h3 {
+  margin: 42px 0 16px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.55rem, 2.5vw, 2.1rem);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.recentArticleCard p {
+  margin: 0;
+  color: #96948f;
+  line-height: 1.8;
+}
+
+.recentArticleCard a {
+  display: inline-block;
+  margin-top: 24px;
+  color: #c8a24a;
+  text-decoration: none;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.recentArticlesAll {
+  margin-top: 30px;
+}
+
 .contact {
   padding: clamp(100px, 12vw, 170px) 24px;
   text-align: center;
@@ -658,6 +711,19 @@ footer a {
 
   .goldenMark {
     width: min(62vw, 230px);
+  }
+
+  .recentArticleGrid {
+    grid-template-columns: 1fr;
+    margin-top: 42px;
+  }
+
+  .recentArticleCard {
+    padding: 24px 20px;
+  }
+
+  .recentArticleCard h3 {
+    margin-top: 30px;
   }
 
   .methodList {
