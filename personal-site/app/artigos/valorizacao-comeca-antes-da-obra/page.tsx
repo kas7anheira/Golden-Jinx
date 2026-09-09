@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AuthorBox from "../AuthorBox";
 
 const siteUrl = "https://luiscastanheira.com";
 const articleUrl = `${siteUrl}/artigos/valorizacao-comeca-antes-da-obra`;
@@ -25,6 +26,22 @@ const articleSchema = {
   "@type": "Article",
   "@id": `${articleUrl}#article`,
   url: articleUrl,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": articleUrl,
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+  },
+  inLanguage: "pt-PT",
+  about: [
+    "Economia aplicada ao imobiliário",
+    "Remodelação",
+    "Valorização imobiliária",
+    "Gestão de projetos",
+    "Controlo de custos",
+  ],
   headline: "Porque a valorização de um imóvel começa antes da obra",
   datePublished: "2026-09-07T23:10:00+01:00",
   dateModified: "2026-09-07T23:10:00+01:00",
@@ -69,6 +86,7 @@ export default function ArticlePage() {
         <h1 style={titleStyle}>Porque a valorização de um imóvel começa antes da obra</h1>
         <p style={bylineStyle}>
           Por <Link href="/" style={authorStyle}>Luís Castanheira</Link>
+          {" · "}Publicado em 7 de setembro de 2026
         </p>
 
         <div style={bodyStyle}>
@@ -114,6 +132,14 @@ export default function ArticlePage() {
             algum desvio de custos ou prazo.
           </p>
 
+          <h2 style={headingStyle}>Valorização não é apenas acabamento</h2>
+          <p>
+            No meu trabalho, valorização significa resolver problemas reais do imóvel:
+            distribuição, funcionalidade, conforto, custos de utilização e qualidade de
+            execução. O acabamento é importante, mas deve fechar uma estratégia que já fazia
+            sentido antes da obra começar.
+          </p>
+
           <p style={closingStyle}>
             Esta perspetiva faz parte do trabalho profissional de Luís Castanheira
             na interseção entre economia, gestão e imobiliário. Para conhecer a
@@ -121,6 +147,8 @@ export default function ArticlePage() {
             <a href="https://goldenjinx.com" style={inlineLinkStyle}>goldenjinx.com</a>.
           </p>
         </div>
+
+        <AuthorBox />
       </article>
 
       <footer style={footerStyle}>
