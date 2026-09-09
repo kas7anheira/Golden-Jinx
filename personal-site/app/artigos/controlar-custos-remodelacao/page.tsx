@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AuthorBox from "../AuthorBox";
 
 const siteUrl = "https://luiscastanheira.com";
 const articleUrl = `${siteUrl}/artigos/controlar-custos-remodelacao`;
@@ -25,6 +26,22 @@ const articleSchema = {
   "@type": "Article",
   "@id": `${articleUrl}#article`,
   url: articleUrl,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": articleUrl,
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+  },
+  inLanguage: "pt-PT",
+  about: [
+    "Economia aplicada ao imobiliário",
+    "Remodelação",
+    "Valorização imobiliária",
+    "Gestão de projetos",
+    "Controlo de custos",
+  ],
   headline: "Como controlar custos numa remodelação sem sacrificar valor",
   datePublished: "2026-09-07T23:10:00+01:00",
   dateModified: "2026-09-07T23:10:00+01:00",
@@ -69,6 +86,7 @@ export default function ArticlePage() {
         <h1 style={titleStyle}>Como controlar custos numa remodelação sem sacrificar valor</h1>
         <p style={bylineStyle}>
           Por <Link href="/" style={authorStyle}>Luís Castanheira</Link>
+          {" · "}Publicado em 7 de setembro de 2026
         </p>
 
         <div style={bodyStyle}>
@@ -116,6 +134,14 @@ export default function ArticlePage() {
             só são somados no final.
           </p>
 
+          <h2 style={headingStyle}>Como aplico este critério na prática</h2>
+          <p>
+            Na análise de uma remodelação procuro distinguir três blocos: o que resolve risco,
+            o que melhora a utilização diária e o que acrescenta valor percebido. Essa ordem
+            ajuda a proteger o orçamento sem transformar a obra numa sucessão de cortes
+            indiscriminados.
+          </p>
+
           <p style={closingStyle}>
             Esta perspetiva faz parte do trabalho profissional de Luís Castanheira
             na interseção entre economia, gestão e imobiliário. Para conhecer a
@@ -123,6 +149,8 @@ export default function ArticlePage() {
             <a href="https://goldenjinx.com" style={inlineLinkStyle}>goldenjinx.com</a>.
           </p>
         </div>
+
+        <AuthorBox />
       </article>
 
       <footer style={footerStyle}>
