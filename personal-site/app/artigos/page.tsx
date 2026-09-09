@@ -39,9 +39,44 @@ const articles = [
   }
 ];
 
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://luiscastanheira.com/artigos#collection",
+  url: "https://luiscastanheira.com/artigos",
+  name: "Artigos de Luís Castanheira",
+  description:
+    "Artigos de Luís Castanheira sobre economia aplicada ao imobiliário, remodelação, controlo de custos e valorização de imóveis.",
+  inLanguage: "pt-PT",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://luiscastanheira.com/#website",
+  },
+  about: {
+    "@type": "Person",
+    "@id": "https://luiscastanheira.com/#person",
+    name: "Luís Castanheira",
+  },
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: articles.map((article, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `https://luiscastanheira.com${article.href}`,
+      name: article.title,
+    })),
+  },
+};
+
 export default function ArtigosPage() {
   return (
     <main style={pageStyle}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(collectionSchema).replace(/</g, "\\u003c")
+        }}
+      />
       <header style={headerStyle}>
         <Link href="/" style={brandStyle}>
           <span style={markStyle}>LC</span>
