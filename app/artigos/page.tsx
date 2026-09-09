@@ -122,6 +122,13 @@ export default function ArtigosPage() {
             >
               Luís Castanheira
             </Link>
+            {" · "}
+            <a
+              href="https://luiscastanheira.com"
+              style={{ color: "#C8A24A", textDecoration: "none" }}
+            >
+              Site pessoal de Luís Castanheira
+            </a>
           </p>
         </div>
       </main>
