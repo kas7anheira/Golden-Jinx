@@ -63,45 +63,85 @@ export const metadata: Metadata = {
   }
 };
 
-const profilePageSchema = {
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "@id": `${siteUrl}/#profile-page`,
-  url: siteUrl,
-  name: "Perfil profissional de Luís Castanheira",
-  description:
-    "Perfil profissional de Luís Castanheira, economista, empresário e sócio-gerente da Golden Jinx.",
-  dateModified: "2026-09-07T22:30:00+01:00",
-  mainEntity: {
-    "@type": "Person",
-    "@id": `${siteUrl}/#person`,
-    name: "Luís Castanheira",
-    alternateName: "Luis Castanheira",
-    url: siteUrl,
-    jobTitle: "Economista, empresário e sócio-gerente da Golden Jinx",
-    description:
-      "Economista e empresário com atividade em construção, remodelação e valorização imobiliária.",
-    image: `${siteUrl}/luis-castanheira-profissional.png`,
-    worksFor: {
-      "@type": "Organization",
-      "@id": "https://goldenjinx.com/#organization",
-      name: "Golden Jinx",
-      url: "https://goldenjinx.com",
-      slogan: "Sparkling Solutions"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "Luís Castanheira",
+      inLanguage: "pt-PT",
+      publisher: {
+        "@id": `${siteUrl}/#person`,
+      },
+      about: {
+        "@id": `${siteUrl}/#person`,
+      },
     },
-    sameAs: [
-      "https://goldenjinx.com/luis-castanheira",
-      "https://www.linkedin.com/in/luiscastanheira/"
-    ],
-    knowsAbout: [
-      "Economia",
-      "Construção",
-      "Remodelação",
-      "Valorização imobiliária",
-      "Gestão de projetos",
-      "Controlo de custos"
-    ]
-  }
+    {
+      "@type": "ProfilePage",
+      "@id": `${siteUrl}/#profile-page`,
+      url: siteUrl,
+      name: "Perfil profissional de Luís Castanheira",
+      description:
+        "Perfil profissional de Luís Castanheira, economista, empresário e sócio-gerente da Golden Jinx.",
+      inLanguage: "pt-PT",
+      dateModified: "2026-09-09T22:55:00+01:00",
+      isPartOf: {
+        "@id": `${siteUrl}/#website`,
+      },
+      mainEntity: {
+        "@id": `${siteUrl}/#person`,
+      },
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: "Luís Castanheira",
+      alternateName: "Luis Castanheira",
+      url: siteUrl,
+      mainEntityOfPage: {
+        "@id": `${siteUrl}/#profile-page`,
+      },
+      image: `${siteUrl}/luis-castanheira-profissional.png`,
+      jobTitle: "Economista, empresário e sócio-gerente da Golden Jinx",
+      description:
+        "Economista e empresário com atividade em construção, remodelação e valorização imobiliária.",
+      worksFor: {
+        "@type": "Organization",
+        "@id": "https://goldenjinx.com/#organization",
+        name: "Golden Jinx",
+        url: "https://goldenjinx.com",
+        slogan: "Sparkling Solutions",
+      },
+      sameAs: [
+        "https://goldenjinx.com/luis-castanheira",
+        "https://www.linkedin.com/in/luiscastanheira/",
+      ],
+      knowsAbout: [
+        "Economia",
+        "Construção",
+        "Remodelação",
+        "Valorização imobiliária",
+        "Gestão de projetos",
+        "Análise económica",
+        "Controlo de custos",
+      ],
+      subjectOf: [
+        {
+          "@type": "CollectionPage",
+          url: `${siteUrl}/artigos`,
+          name: "Artigos de Luís Castanheira",
+        },
+        {
+          "@type": "ProfilePage",
+          url: "https://goldenjinx.com/luis-castanheira",
+          name: "Perfil de Luís Castanheira na Golden Jinx",
+        },
+      ],
+    },
+  ],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -111,7 +151,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(profilePageSchema).replace(/</g, "\\u003c")
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c")
           }}
         />
         {children}
