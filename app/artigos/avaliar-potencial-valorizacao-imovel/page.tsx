@@ -199,6 +199,23 @@ export default function ArticlePage() {
               custo de transformação e valor final, com uma abordagem orientada para
               decisões economicamente sustentáveis.
             </p>
+
+            <p style={{ color: "#888", lineHeight: 1.8 }}>
+              Conheça o{" "}
+              <a
+                href="https://luiscastanheira.com"
+                style={{ color: "#C8A24A", textDecoration: "none" }}
+              >
+                site oficial de Luís Castanheira
+              </a>
+              {" "}e consulte{" "}
+              <a
+                href="https://luiscastanheira.com/artigos"
+                style={{ color: "#C8A24A", textDecoration: "none" }}
+              >
+                mais artigos de Luís Castanheira
+              </a>.
+            </p>
           </div>
         </article>
       </main>
