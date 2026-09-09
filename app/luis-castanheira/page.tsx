@@ -76,11 +76,19 @@ const profilePageSchema = {
   name: "Perfil profissional de Luís Castanheira",
   description:
     "Perfil profissional de Luís Castanheira, economista, empresário e sócio-gerente da Golden Jinx.",
-  dateModified: "2026-09-06T12:00:00+01:00",
+  inLanguage: "pt-PT",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+  },
+  dateModified: "2026-09-09T22:55:00+01:00",
   mainEntity: {
     "@type": "Person",
     "@id": `${personalUrl}/#person`,
     name: "Luís Castanheira",
+    mainEntityOfPage: {
+      "@id": `${profileUrl}#profile-page`,
+    },
     alternateName: "Luis Castanheira",
     url: personalUrl,
     image: profileImageUrl,
