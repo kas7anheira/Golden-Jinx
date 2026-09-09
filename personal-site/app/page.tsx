@@ -149,6 +149,46 @@ export default function Home() {
         </ol>
       </section>
 
+      <section className="section recentArticles" id="artigos-recentes">
+        <div className="sectionIntro">
+          <p className="eyebrow">Artigos recentes</p>
+          <h2>Perspetiva profissional sobre decisões que criam valor.</h2>
+        </div>
+
+        <div className="recentArticleGrid">
+          <article className="recentArticleCard">
+            <span>01</span>
+            <h3>Como controlar custos numa remodelação sem sacrificar valor</h3>
+            <p>
+              Prioridades, margem de segurança e acompanhamento do orçamento ao longo da obra.
+            </p>
+            <a href="/artigos/controlar-custos-remodelacao">Ler artigo →</a>
+          </article>
+
+          <article className="recentArticleCard">
+            <span>02</span>
+            <h3>O que analisar antes de avançar com uma remodelação</h3>
+            <p>
+              Estado técnico, distribuição, objetivo, custos invisíveis e valor final esperado.
+            </p>
+            <a href="/artigos/o-que-analisar-antes-de-remodelar">Ler artigo →</a>
+          </article>
+
+          <article className="recentArticleCard">
+            <span>03</span>
+            <h3>Porque a valorização de um imóvel começa antes da obra</h3>
+            <p>
+              A qualidade da decisão inicial condiciona estratégia, orçamento e resultado final.
+            </p>
+            <a href="/artigos/valorizacao-comeca-antes-da-obra">Ler artigo →</a>
+          </article>
+        </div>
+
+        <a className="textLink recentArticlesAll" href="/artigos">
+          Ver todos os artigos <span>→</span>
+        </a>
+      </section>
+
       <section className="contact" id="contacto">
         <p className="eyebrow">Contacto profissional</p>
         <h2>Projetos e oportunidades começam por uma boa conversa.</h2>
