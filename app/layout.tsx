@@ -61,30 +61,52 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationSchema = {
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": `${siteUrl}/#organization`,
-  name: "Golden Jinx",
-  url: siteUrl,
-  slogan: "Sparkling Solutions",
-  description:
-    "Empresa portuguesa dedicada à construção, remodelação e valorização imobiliária.",
-  email: "info@goldenjinx.pt",
-  areaServed: {
-    "@type": "Country",
-    name: "Portugal",
-  },
-  employee: {
-    "@type": "Person",
-    "@id": "https://luiscastanheira.com/#person",
-    name: "Luís Castanheira",
-    url: "https://luiscastanheira.com",
-    sameAs: [
-      "https://www.linkedin.com/in/luiscastanheira/",
-    ],
-    jobTitle: "Sócio-Gerente",
-  },
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "Golden Jinx",
+      url: siteUrl,
+      slogan: "Sparkling Solutions",
+      description:
+        "Empresa portuguesa dedicada à construção, remodelação e valorização imobiliária.",
+      email: "info@goldenjinx.pt",
+      areaServed: {
+        "@type": "Country",
+        name: "Portugal",
+      },
+      employee: {
+        "@id": "https://luiscastanheira.com/#person",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "Golden Jinx",
+      inLanguage: "pt-PT",
+      publisher: {
+        "@id": `${siteUrl}/#organization`,
+      },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://luiscastanheira.com/#person",
+      name: "Luís Castanheira",
+      alternateName: "Luis Castanheira",
+      url: "https://luiscastanheira.com",
+      jobTitle: "Economista, empresário e sócio-gerente da Golden Jinx",
+      worksFor: {
+        "@id": `${siteUrl}/#organization`,
+      },
+      sameAs: [
+        "https://goldenjinx.com/luis-castanheira",
+        "https://www.linkedin.com/in/luiscastanheira/",
+      ],
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -98,7 +120,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema).replace(/</g, "\\u003c"),
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
           }}
         />
         {children}
