@@ -5,6 +5,9 @@
 html {
   scroll-behavior: smooth;
   background: #070707;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -12,6 +15,9 @@ body {
   background: #070707;
   color: #f6f2e8;
   font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -20,7 +26,9 @@ a {
 
 main {
   min-height: 100vh;
-  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .nav {
@@ -106,6 +114,7 @@ main {
   position: relative;
   z-index: 1;
   width: 100%;
+  min-width: 0;
   max-width: 1380px;
   margin: 0 auto;
   display: grid;
@@ -135,6 +144,7 @@ main {
 
 .hero h1 {
   margin: 22px 0 0;
+  max-width: 100%;
   font-size: clamp(4rem, 10vw, 9.6rem);
   line-height: .78;
 }
@@ -291,6 +301,7 @@ main {
 
 .profileGrid {
   display: grid;
+  min-width: 0;
   grid-template-columns: minmax(280px, .85fr) minmax(320px, 1.15fr);
   gap: clamp(45px, 7vw, 100px);
 }
@@ -303,6 +314,7 @@ main {
 }
 
 .bodyCopy {
+  min-width: 0;
   color: #aaa8a2;
   font-size: 1.02rem;
   line-height: 1.92;
@@ -319,6 +331,7 @@ main {
 
 .sectionIntro {
   display: grid;
+  min-width: 0;
   grid-template-columns: minmax(150px, .4fr) minmax(0, 1.6fr);
   gap: 40px;
   align-items: start;
@@ -385,6 +398,7 @@ main {
 
 .golden > * {
   max-width: 720px;
+  min-width: 0;
 }
 
 .goldenMark {
@@ -519,18 +533,77 @@ footer a {
 @media (max-width: 650px) {
   .nav {
     min-height: 68px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .brand {
-    font-size: .8rem;
+    min-width: 0;
+    max-width: calc(100vw - 32px);
+    font-size: .78rem;
+  }
+
+  .brand > span:last-child {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .hero {
-    padding-top: 118px;
+    min-height: auto;
+    padding: 112px 16px 64px;
+  }
+
+  .heroInner,
+  .heroCopy,
+  .profileGrid,
+  .bodyCopy,
+  .sectionIntro,
+  .golden > div {
+    min-width: 0;
+    width: 100%;
   }
 
   .hero h1 {
-    font-size: clamp(3.7rem, 20vw, 6rem);
+    max-width: 100%;
+    font-size: clamp(3.05rem, 14vw, 4.9rem);
+    line-height: .86;
+    letter-spacing: -.055em;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .role {
+    margin-top: 26px;
+    font-size: .74rem;
+    letter-spacing: .055em;
+    overflow-wrap: break-word;
+  }
+
+  .lead,
+  .bodyCopy,
+  .areaGrid p,
+  .methodList p,
+  .golden p,
+  .contact > p:not(.eyebrow) {
+    overflow-wrap: break-word;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    min-width: 0;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: center;
+    white-space: normal;
   }
 
   .portraitCard figcaption {
@@ -541,32 +614,75 @@ footer a {
     text-align: left;
   }
 
+  .section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section h2,
+  .contact h2 {
+    max-width: 100%;
+    font-size: clamp(2.25rem, 10vw, 3.4rem);
+    line-height: 1.02;
+    letter-spacing: -.035em;
+    overflow-wrap: break-word;
+  }
+
+  .profile,
+  .profileGrid,
+  .sectionIntro,
+  .golden {
+    gap: 32px;
+  }
+
   .sectionIntro {
     grid-template-columns: 1fr;
   }
 
   .areaGrid {
     grid-template-columns: 1fr;
+    margin-top: 48px;
   }
 
   .areaGrid article,
   .areaGrid article:nth-child(2) {
+    min-height: auto;
     border-right: 0;
     border-bottom: 1px solid rgba(255,255,255,.08);
   }
 
+  .areaGrid h3,
+  .methodList h3 {
+    margin-top: 34px;
+  }
+
+  .goldenMark {
+    width: min(62vw, 230px);
+  }
+
+  .methodList {
+    margin-top: 48px;
+  }
+
   .methodList li {
-    grid-template-columns: 48px 1fr;
-    gap: 16px;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
     padding: 26px 0;
   }
 
   .methodList li p {
     grid-column: 2;
+    min-width: 0;
+  }
+
+  .contact {
+    padding: 84px 16px;
   }
 
   footer {
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
