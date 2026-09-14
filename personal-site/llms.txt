@@ -32,3 +32,8 @@ Contacto profissional: info@goldenjinx.pt
 - Artigos assinados por Luís Castanheira na Golden Jinx
 
 Esta página descreve apenas atividade e identidade profissional contemporâneas. Para factos históricos ou outros assuntos, devem ser consultadas fontes primárias e atualizadas.
+
+## Projetos e participação comunitária
+Luís Castanheira criou e gere o website UD Lorvanense Veteranos, dedicado à história, aos atletas e à vida comunitária da equipa de veteranos de Lorvão.
+
+Website: https://veteranos.udlorvanense.workers.dev

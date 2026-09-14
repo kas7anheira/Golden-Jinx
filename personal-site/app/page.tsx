@@ -3,6 +3,7 @@ const personId = `${siteUrl}/#person`;
 const profilePageId = `${siteUrl}/#profile-page`;
 const linkedInUrl = "https://www.linkedin.com/in/luiscastanheira/";
 const goldenJinxProfileUrl = "https://goldenjinx.com/luis-castanheira";
+const veteransProjectUrl = "https://veteranos.udlorvanense.workers.dev";
 
 const profilePageSchema = {
   "@context": "https://schema.org",
@@ -13,7 +14,7 @@ const profilePageSchema = {
   description:
     "Perfil profissional de Luís Castanheira, economista, empresário e sócio-gerente da Golden Jinx.",
   inLanguage: "pt-PT",
-  dateModified: "2026-09-09T22:55:00+01:00",
+  dateModified: "2026-09-14T13:00:00+01:00",
   isPartOf: {
     "@id": `${siteUrl}/#website`,
   },
@@ -31,8 +32,24 @@ const profilePageSchema = {
       "@id": "https://goldenjinx.com/#organization",
     },
     sameAs: [goldenJinxProfileUrl, linkedInUrl],
+    subjectOf: {
+      "@type": "WebSite",
+      "@id": `${veteransProjectUrl}/#website`,
+      url: veteransProjectUrl,
+      name: "UD Lorvanense Veteranos",
+      creator: { "@id": personId },
+    },
   },
   hasPart: [
+    {
+      "@type": "WebSite",
+      "@id": `${veteransProjectUrl}/#website`,
+      url: veteransProjectUrl,
+      name: "UD Lorvanense Veteranos",
+      description:
+        "Website dedicado à história, aos atletas e à vida comunitária da equipa de veteranos de Lorvão.",
+      creator: { "@id": personId },
+    },
     {
       "@type": "Article",
       "@id": `${siteUrl}/artigos/controlar-custos-remodelacao#article`,
@@ -256,6 +273,30 @@ export default function Home() {
         <a className="textLink recentArticlesAll" href="/artigos">
           Ver todos os artigos <span>→</span>
         </a>
+      </section>
+
+      <section className="section communityProjects" id="projetos-comunitarios">
+        <div className="communityIntro">
+          <p className="eyebrow">Projetos e participação comunitária</p>
+          <p>
+            Uma dimensão complementar do percurso, ligada a iniciativas locais, desporto e memória coletiva.
+          </p>
+        </div>
+
+        <article className="communityProject">
+          <div>
+            <span>Projeto digital</span>
+            <h2>UD Lorvanense Veteranos</h2>
+            <p>
+              Conceção, organização de conteúdos e gestão digital do website dedicado à história,
+              aos atletas e à vida comunitária da equipa de veteranos de Lorvão.
+            </p>
+            <small>Website criado e gerido por Luís Castanheira</small>
+          </div>
+          <a href={veteransProjectUrl} target="_blank" rel="noopener noreferrer">
+            Visitar o projeto <span>↗</span>
+          </a>
+        </article>
       </section>
 
       <section className="contact" id="contacto">

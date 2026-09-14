@@ -6,6 +6,7 @@ const personId = `${siteUrl}/#person`;
 const profilePageId = `${siteUrl}/#profile-page`;
 const linkedInUrl = "https://www.linkedin.com/in/luiscastanheira/";
 const goldenJinxProfileUrl = "https://goldenjinx.com/luis-castanheira";
+const veteransProjectUrl = "https://veteranos.udlorvanense.workers.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -130,6 +131,15 @@ const structuredData = {
           "@type": "ProfilePage",
           url: goldenJinxProfileUrl,
           name: "Perfil de Luís Castanheira na Golden Jinx",
+        },
+        {
+          "@type": "WebSite",
+          "@id": `${veteransProjectUrl}/#website`,
+          url: veteransProjectUrl,
+          name: "UD Lorvanense Veteranos",
+          description:
+            "Projeto digital comunitário criado e gerido por Luís Castanheira.",
+          creator: { "@id": personId },
         },
       ],
     },
