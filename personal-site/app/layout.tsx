@@ -84,48 +84,6 @@ const structuredData = {
       },
     },
     {
-      "@type": "ProfilePage",
-      "@id": profilePageId,
-      url: siteUrl,
-      name: "Perfil profissional de Luís Castanheira",
-      description:
-        "Perfil profissional de Luís Castanheira, economista, empresário e sócio-gerente da Golden Jinx.",
-      inLanguage: "pt-PT",
-      dateModified: "2026-09-09T22:55:00+01:00",
-      isPartOf: {
-        "@id": `${siteUrl}/#website`,
-      },
-      mainEntity: {
-        "@id": personId,
-      },
-      hasPart: [
-        {
-          "@type": "Article",
-          "@id": `${siteUrl}/artigos/controlar-custos-remodelacao#article`,
-          url: `${siteUrl}/artigos/controlar-custos-remodelacao`,
-          headline: "Como controlar custos numa remodelação sem sacrificar valor",
-          datePublished: "2026-09-07T23:10:00+01:00",
-          author: { "@id": personId },
-        },
-        {
-          "@type": "Article",
-          "@id": `${siteUrl}/artigos/o-que-analisar-antes-de-remodelar#article`,
-          url: `${siteUrl}/artigos/o-que-analisar-antes-de-remodelar`,
-          headline: "O que analisar antes de avançar com uma remodelação",
-          datePublished: "2026-09-07T23:10:00+01:00",
-          author: { "@id": personId },
-        },
-        {
-          "@type": "Article",
-          "@id": `${siteUrl}/artigos/valorizacao-comeca-antes-da-obra#article`,
-          url: `${siteUrl}/artigos/valorizacao-comeca-antes-da-obra`,
-          headline: "Porque a valorização de um imóvel começa antes da obra",
-          datePublished: "2026-09-07T23:10:00+01:00",
-          author: { "@id": personId },
-        },
-      ],
-    },
-    {
       "@type": "Person",
       "@id": personId,
       name: "Luís Castanheira",
