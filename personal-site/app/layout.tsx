@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const siteUrl = "https://luiscastanheira.com";
+const personId = `${siteUrl}/#person`;
+const profilePageId = `${siteUrl}/#profile-page`;
+const linkedInUrl = "https://www.linkedin.com/in/luiscastanheira/";
+const goldenJinxProfileUrl = "https://goldenjinx.com/luis-castanheira";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -73,15 +77,15 @@ const structuredData = {
       name: "Luís Castanheira",
       inLanguage: "pt-PT",
       publisher: {
-        "@id": `${siteUrl}/#person`,
+        "@id": personId,
       },
       about: {
-        "@id": `${siteUrl}/#person`,
+        "@id": personId,
       },
     },
     {
       "@type": "ProfilePage",
-      "@id": `${siteUrl}/#profile-page`,
+      "@id": profilePageId,
       url: siteUrl,
       name: "Perfil profissional de Luís Castanheira",
       description:
@@ -92,17 +96,43 @@ const structuredData = {
         "@id": `${siteUrl}/#website`,
       },
       mainEntity: {
-        "@id": `${siteUrl}/#person`,
+        "@id": personId,
       },
+      hasPart: [
+        {
+          "@type": "Article",
+          "@id": `${siteUrl}/artigos/controlar-custos-remodelacao#article`,
+          url: `${siteUrl}/artigos/controlar-custos-remodelacao`,
+          headline: "Como controlar custos numa remodelação sem sacrificar valor",
+          datePublished: "2026-09-07T23:10:00+01:00",
+          author: { "@id": personId },
+        },
+        {
+          "@type": "Article",
+          "@id": `${siteUrl}/artigos/o-que-analisar-antes-de-remodelar#article`,
+          url: `${siteUrl}/artigos/o-que-analisar-antes-de-remodelar`,
+          headline: "O que analisar antes de avançar com uma remodelação",
+          datePublished: "2026-09-07T23:10:00+01:00",
+          author: { "@id": personId },
+        },
+        {
+          "@type": "Article",
+          "@id": `${siteUrl}/artigos/valorizacao-comeca-antes-da-obra#article`,
+          url: `${siteUrl}/artigos/valorizacao-comeca-antes-da-obra`,
+          headline: "Porque a valorização de um imóvel começa antes da obra",
+          datePublished: "2026-09-07T23:10:00+01:00",
+          author: { "@id": personId },
+        },
+      ],
     },
     {
       "@type": "Person",
-      "@id": `${siteUrl}/#person`,
+      "@id": personId,
       name: "Luís Castanheira",
       alternateName: "Luis Castanheira",
       url: siteUrl,
       mainEntityOfPage: {
-        "@id": `${siteUrl}/#profile-page`,
+        "@id": profilePageId,
       },
       image: `${siteUrl}/luis-castanheira-profissional.png`,
       jobTitle: "Economista, empresário e sócio-gerente da Golden Jinx",
@@ -115,9 +145,13 @@ const structuredData = {
         url: "https://goldenjinx.com",
         slogan: "Sparkling Solutions",
       },
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Universidade de Évora",
+      },
       sameAs: [
-        "https://goldenjinx.com/luis-castanheira",
-        "https://www.linkedin.com/in/luiscastanheira/",
+        goldenJinxProfileUrl,
+        linkedInUrl,
       ],
       knowsAbout: [
         "Economia",
@@ -136,7 +170,7 @@ const structuredData = {
         },
         {
           "@type": "ProfilePage",
-          url: "https://goldenjinx.com/luis-castanheira",
+          url: goldenJinxProfileUrl,
           name: "Perfil de Luís Castanheira na Golden Jinx",
         },
       ],
