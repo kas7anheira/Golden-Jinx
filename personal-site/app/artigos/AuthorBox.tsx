@@ -74,11 +74,21 @@ export default function AuthorBox() {
             fontSize: ".78rem",
           }}
         >
-          <a href="/" style={{ color: "#c8a24a" }}>Perfil profissional</a>
-          <a href="https://goldenjinx.com/luis-castanheira" style={{ color: "#c8a24a" }}>
+          <a href="/" rel="author" style={{ color: "#c8a24a" }}>
+            Perfil profissional
+          </a>
+          <a
+            href="https://goldenjinx.com/luis-castanheira"
+            rel="me"
+            style={{ color: "#c8a24a" }}
+          >
             Golden Jinx
           </a>
-          <a href="https://www.linkedin.com/in/luiscastanheira/" style={{ color: "#c8a24a" }}>
+          <a
+            href="https://www.linkedin.com/in/luiscastanheira/"
+            rel="me"
+            style={{ color: "#c8a24a" }}
+          >
             LinkedIn
           </a>
         </div>
