@@ -8,6 +8,11 @@ const siteUrl = (
   "https://goldenjinx.com"
 ).replace(/\/$/, "");
 
+const personalUrl = "https://luiscastanheira.com";
+const personId = `${personalUrl}/#person`;
+const goldenJinxProfileUrl = `${siteUrl}/luis-castanheira`;
+const linkedInUrl = "https://www.linkedin.com/in/luiscastanheira/";
+
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-body",
@@ -78,7 +83,7 @@ const structuredData = {
         name: "Portugal",
       },
       employee: {
-        "@id": "https://luiscastanheira.com/#person",
+        "@id": personId,
       },
     },
     {
@@ -93,17 +98,33 @@ const structuredData = {
     },
     {
       "@type": "Person",
-      "@id": "https://luiscastanheira.com/#person",
+      "@id": personId,
       name: "Luís Castanheira",
       alternateName: "Luis Castanheira",
-      url: "https://luiscastanheira.com",
+      url: personalUrl,
+      image: `${siteUrl}/luis-castanheira-profissional.png`,
       jobTitle: "Economista, empresário e sócio-gerente da Golden Jinx",
+      description:
+        "Economista e empresário com atividade em construção, remodelação e valorização imobiliária através da Golden Jinx.",
       worksFor: {
         "@id": `${siteUrl}/#organization`,
       },
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Universidade de Évora",
+      },
       sameAs: [
-        "https://goldenjinx.com/luis-castanheira",
-        "https://www.linkedin.com/in/luiscastanheira/",
+        goldenJinxProfileUrl,
+        linkedInUrl,
+      ],
+      knowsAbout: [
+        "Economia",
+        "Construção",
+        "Remodelação",
+        "Valorização imobiliária",
+        "Gestão de projetos",
+        "Análise económica",
+        "Controlo de custos",
       ],
     },
   ],
