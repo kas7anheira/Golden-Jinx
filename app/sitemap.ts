@@ -20,7 +20,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/projetos`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/contactos`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/avaliar-imovel`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/luis-castanheira`, changeFrequency: "monthly", priority: 0.9 },
+    {
+      url: `${baseUrl}/luis-castanheira`,
+      lastModified: new Date("2026-09-14T10:00:00+01:00"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
     { url: `${baseUrl}/artigos`, changeFrequency: "weekly", priority: 0.8 },
     {
       url: `${baseUrl}/artigos/avaliar-potencial-valorizacao-imovel`,
