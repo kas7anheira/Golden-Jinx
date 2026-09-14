@@ -41,7 +41,7 @@ export default function Home() {
           <a href="#atividade">Atividade</a>
           <a href="#golden-jinx">Golden Jinx</a>
           <a href="/artigos">Artigos</a>
-          <a href="https://www.linkedin.com/in/luiscastanheira/">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/luiscastanheira/" rel="me">LinkedIn</a>
           <a href="#contacto">Contacto</a>
         </nav>
       </header>
@@ -60,7 +60,7 @@ export default function Home() {
               <a className="primary" href="https://goldenjinx.com">Conhecer a Golden Jinx</a>
               <a className="secondary" href="#perfil">Conhecer o perfil</a>
               <a className="secondary" href="/artigos">Ler artigos</a>
-              <a className="secondary" href="https://www.linkedin.com/in/luiscastanheira/">LinkedIn</a>
+              <a className="secondary" href="https://www.linkedin.com/in/luiscastanheira/" rel="me">LinkedIn</a>
             </div>
           </div>
 
@@ -128,7 +128,7 @@ export default function Home() {
             A Golden Jinx desenvolve projetos de construção, remodelação e valorização imobiliária, além da compra, venda e arrendamento de imóveis próprios. Luís Castanheira exerce funções de sócio-gerente da empresa.
           </p>
           <a className="textLink" href="https://goldenjinx.com">Visitar goldenjinx.com <span>↗</span></a>
-          <a className="textLink" href="https://goldenjinx.com/luis-castanheira">Perfil na Golden Jinx <span>↗</span></a>
+          <a className="textLink" href="https://goldenjinx.com/luis-castanheira" rel="me">Perfil na Golden Jinx <span>↗</span></a>
           <a className="textLink" href="https://goldenjinx.com/artigos">Artigos e perspetiva <span>↗</span></a>
         </div>
       </section>
@@ -200,7 +200,7 @@ export default function Home() {
 
       <footer>
         <span>© 2026 Luís Castanheira</span>
-        <a href="https://goldenjinx.com/luis-castanheira">Perfil na Golden Jinx</a>
+        <a href="https://goldenjinx.com/luis-castanheira" rel="me">Perfil na Golden Jinx</a>
       </footer>
     </main>
   );
