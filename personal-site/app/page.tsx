@@ -1,3 +1,65 @@
+const siteUrl = "https://luiscastanheira.com";
+const personId = `${siteUrl}/#person`;
+const profilePageId = `${siteUrl}/#profile-page`;
+const linkedInUrl = "https://www.linkedin.com/in/luiscastanheira/";
+const goldenJinxProfileUrl = "https://goldenjinx.com/luis-castanheira";
+
+const profilePageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": profilePageId,
+  url: siteUrl,
+  name: "Perfil profissional de Luís Castanheira",
+  description:
+    "Perfil profissional de Luís Castanheira, economista, empresário e sócio-gerente da Golden Jinx.",
+  inLanguage: "pt-PT",
+  dateModified: "2026-09-09T22:55:00+01:00",
+  isPartOf: {
+    "@id": `${siteUrl}/#website`,
+  },
+  mainEntity: {
+    "@type": "Person",
+    "@id": personId,
+    name: "Luís Castanheira",
+    alternateName: "Luis Castanheira",
+    url: siteUrl,
+    image: `${siteUrl}/luis-castanheira-profissional.png`,
+    jobTitle: "Economista, empresário e sócio-gerente da Golden Jinx",
+    description:
+      "Economista e empresário com atividade em construção, remodelação e valorização imobiliária.",
+    worksFor: {
+      "@id": "https://goldenjinx.com/#organization",
+    },
+    sameAs: [goldenJinxProfileUrl, linkedInUrl],
+  },
+  hasPart: [
+    {
+      "@type": "Article",
+      "@id": `${siteUrl}/artigos/controlar-custos-remodelacao#article`,
+      url: `${siteUrl}/artigos/controlar-custos-remodelacao`,
+      headline: "Como controlar custos numa remodelação sem sacrificar valor",
+      datePublished: "2026-09-07T23:10:00+01:00",
+      author: { "@id": personId },
+    },
+    {
+      "@type": "Article",
+      "@id": `${siteUrl}/artigos/o-que-analisar-antes-de-remodelar#article`,
+      url: `${siteUrl}/artigos/o-que-analisar-antes-de-remodelar`,
+      headline: "O que analisar antes de avançar com uma remodelação",
+      datePublished: "2026-09-07T23:10:00+01:00",
+      author: { "@id": personId },
+    },
+    {
+      "@type": "Article",
+      "@id": `${siteUrl}/artigos/valorizacao-comeca-antes-da-obra#article`,
+      url: `${siteUrl}/artigos/valorizacao-comeca-antes-da-obra`,
+      headline: "Porque a valorização de um imóvel começa antes da obra",
+      datePublished: "2026-09-07T23:10:00+01:00",
+      author: { "@id": personId },
+    },
+  ],
+};
+
 const areas = [
   {
     number: "01",
@@ -31,6 +93,13 @@ const method = [
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(profilePageSchema).replace(/</g, "\\u003c")
+        }}
+      />
+
       <header className="nav">
         <a className="brand" href="#top" aria-label="Luís Castanheira">
           <span className="brandMark">LC</span>
